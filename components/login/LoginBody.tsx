@@ -100,6 +100,7 @@ const LoginBody = () => {
             const response = await fetch("https://hoshbato.com/app/api/login", {
                 method: "POST", // or 'PUT'
                 headers: {
+                    "Access-Control-Allow-Origin": "*",
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(data),
@@ -141,9 +142,9 @@ const LoginBody = () => {
             const result = await response.json();
             console.log("res:", response);
             if (response.status === 200) {
-                 sessionStorage.setItem('user_token', result.token);
-                 localStorage.setItem('user_token', result.token);
-                 router.push('/')
+                sessionStorage.setItem('user_token', result.token);
+                localStorage.setItem('user_token', result.token);
+                router.push('/')
                 console.log("Success:", result);
             } else {
                 console.log("Success:", result);
