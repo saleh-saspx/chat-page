@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__next{
+  height: 100%;
+}
+main{
+  height: 100%;
+}
+html,
+body,
+:root{
+  height: 100%;
+}
+::-webkit-scrollbar{
+  @apply w-2 h-4 max-md:hidden
+  
+
+}
+::-webkit-scrollbar-thumb{
+  @apply bg-icon rounded-2xl
+}
+::-webkit-scrollbar-track{
+ @apply rounded-2xl bg-white
+}
